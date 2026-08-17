@@ -21,6 +21,16 @@ DeepSeek Harness 网页端插件：**透明毛玻璃主题 + 动态视频壁纸�
 2. 准备视频：把任意 mp4 复制到 `C:\Users\Administrator\.dsh\glass-wall.mp4`；
 3. Wallpaper Engine 路径按本机修改 `host.js` 里的 `WPE` 常量（默认 `E:\SteamLibrary\steamapps\common\wallpaper_engine\wallpaper64.exe`）。
 
+## 样式调整面板
+
+激活后，**设置 → 玻璃主题** 里有实时调节控件：
+
+- **界面透明度**：20% ~ 90%（默认 38%）
+- **毛玻璃模糊**：0 ~ 30px（默认 10px）
+- **动态视频背景**：开 / 关
+
+拖动即生效（透明度走主题 token 覆盖，模糊度走 CSS 变量 `--glass-blur`）。动态插件为临时能力，重启后恢复默认值；如需持久化，可封装为 profile 插件。
+
 ## 换壁纸
 
 - **动态**：把目标视频复制为 `glass-wall.mp4`，并把 `client.js` 里 `video.src` 的 `?v=N` 版本号 +1（避免浏览器缓存）；
